@@ -1,164 +1,951 @@
-<!DOCTYPE html>
-<html lang="en" dir="rtl">
+@import "../css/variables.scss";
+body {
+    font-family: "IBM", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    background-color: #D2D6DB;
+}
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="../../assets/images/favicon.svg" type="image/x-icon">
-    <link rel="shortcut icon" href="../../assets/images/favicon.svg" type="image/x-icon">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="generator" content="">
-    <title>components</title>
+.container {
+    max-width: 1523px;
+}
 
-    <!-- Style .css -->
-    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/rtl.css">
-    <link rel="stylesheet" href="../../assets/css/responsive.css">
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
 
-</head>
+input,
+select {
+    box-shadow: none !important;
+    border: none;
+}
 
-<body>
+.title-page {
+    h2 {
+        color: #1F2A37;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+}
 
-    <div class="container my-5">
+.action-section {
+    display: flex;
+    justify-content: end;
+    gap: 16px;
+    margin-bottom: 24px;
+    .btn {
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 4px 16px;
+    }
+    .btn-back {
+        background-color: #ffff;
+        border: solid 1px #E5E7EB;
+        color: #161616;
+        &:hover {
+            background-color: #F3F4F6;
+        }
+    }
+    .btn-add {
+        background-color: #1B8354;
+        color: #fff;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 4px;
+        i.add-new {
+            background-image: url(../images/addnew-icon.svg);
+            height: 24px;
+            width: 24px;
+            display: block;
+        }
+        &:hover {
+            background-color: #166A45;
+        }
+    }
+}
 
-        <div class="title-page">
-          <h2>خدمات الاستشارات الفورية</h2>
-        </div>
+.card-accordion {
+    .intro-p {
+        h5 {
+            color: #1F2A37;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        p {
+            color: #1F2A37;
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+    }
+    .accordion-item:first-of-type {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    .accordion-item:last-of-type .accordion-button.collapsed {
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    .accordion-item:last-of-type .accordion-collapse {
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    .accordion-item:first-of-type .accordion-button {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    .accordion-item {
+        border: none;
+    }
+    .accordion-button {
+        border-top: 2px solid #D2D6DB;
+        border-radius: 0px;
+        box-shadow: none;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 1rem;
+        &:focus, &:hover {
+            box-shadow: none;
+            background-color: #F3F4F6;
+        }
+    }
+    .accordion-button:not(.collapsed) {
+        color: #161616;
+        background-color: transparent;
+        box-shadow: none;
+        border-radius: 0px;
+        &:focus {
+            border: 2px solid #161616;
+        }
+    }
 
-        <div class="card card-accordion">
-          <!-- Buttons -->
-          <div class="d-flex justify-content-end mb-3">
-            <button class="btn btn-light ms-2">العودة</button>
-            <button class="btn btn-success">قم بطلب الخدمة</button>
-          </div>
-          <!-- Introductory Paragraph -->
-           <div class="intro-p">
-            <h5>عنوان الفقرة التعريفية</h5>
-            <p>إذا كنت تحتاج إلى عدد أكبر من الفقرات يمكنك ذلك عبر مولد النصوص الموجود في أدوات نفذلي كما يمكنك العثور على العديد من الأدوات الأخرى التي تساعدك على تنفيذ العديد من المهام ببساطة وسهولة، هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النصوص في أدوات منصة نفذلي، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى تولدها الأداة، أيضاً ستجد العديد من الأدوات الاخرى التي ستساعدك في حياتك اليومية . </p>
-           </div>
-          
-          <!-- Accordion Section -->
-          <div class="accordion" id="serviceDetails">
-            <!-- Beneficiaries of the Service -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingBeneficiaries">
-                <button
-                  class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBeneficiaries">
-                  المستفيدين من الخدمة
-                </button>
-              </h2>
-              <div id="collapseBeneficiaries" class="accordion-collapse collapse show" data-bs-parent="#serviceDetails">
-                <div class="accordion-body">
-                  <div class="service-price-box">
-                    <img src="../../assets/images/freepl.svg" alt="">
-                    <div class="banner">
-                        <p>سعر الخدمة</p>
-                        <h5>مجانية</h5>
-                    </div>
-                  </div>
-                  <ul class="content-list">
-                    <li>سيتمكن المستخدم من الوصول إلى جميع المقالات، الفيديوهات، والدروس الحصرية غير المتاحة للمستخدمين العاديين.</li>
-                    <li>سيتمتع المستخدم بتجربة تصفح خالية من الإعلانات، مما يتيح له التركيز على المحتوى دون أي إزعاج.</li>
-                    <li>يحصل المستخدم على خصومات حصرية على الخدمات أو المنتجات المتوفرة، بالإضافة إلى عروض خاصة وخصومات موسمية.</li>
-                    <li>يتمتع المستخدم بإمكانية الوصول إلى فريق دعم فني مخصص لمساعدته في حل أي مشاكل قد تواجهه بسرعة وكفاءة.</li>
-                    <li>يمكن للمستخدم تحميل المحتوى المفضل لديه للوصول إليه بدون الحاجة للاتصال بالإنترنت، مما يتيح له الاستفادة منه في أي وقت.</li>
-                    <li>يحصل المستخدم على إشعارات مبكرة وتنبيهات حول التحديثات أو الأحداث القادمة، ليكون من أوائل المستفيدين من أي جديد.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- Service Terms -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                  شروط الخدمة
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#serviceDetails">
-                <div class="accordion-body">
-                    <ul class="content-list-dots">
-                      <li>بمجرد التسجيل أو استخدامك لخدماتنا، فإنك توافق على الالتزام بجميع الشروط والأحكام الواردة في هذه الوثيقة. إذا كنت لا توافق على أي من الشروط، يُرجى عدم استخدام الخدمة.</li>
-                      <li>يُسمح لك باستخدام خدماتنا لأغراض قانونية فقط ووفقًا للشروط المحددة هنا. يُحظر استخدام الخدمة لأي غرض غير قانوني أو غير أخلاقي، بما في ذلك - على سبيل المثال لا الحصر - نشر أو مشاركة محتوى غير لائق أو مواد مسيئة.</li>
-                      <li>يتعين على المستخدمين تقديم معلومات دقيقة وكاملة أثناء عملية التسجيل. أنت مسؤول عن الحفاظ على سرية بيانات حسابك، كما أنك تتحمل المسؤولية الكاملة عن جميع الأنشطة التي تتم من خلال حسابك.</li>
-                      <li>نحن ملتزمون بحماية خصوصيتك. يُرجى مراجعة [سياسة الخصوصية] لفهم كيفية جمع واستخدام المعلومات الخاصة بك عند استخدامك للخدمات.</li>
-                      <li>تعتبر جميع المواد والمحتوى المتاح على هذه الخدمة ملكًا لـ[اسم الشركة] أو مرخصًا لها. يُحظر نسخ، توزيع، أو استخدام أي محتوى دون الحصول على إذن كتابي صريح.</li>
-                      <li>تحتفظ [اسم الشركة] بالحق في تعديل أو تحديث شروط الخدمة من وقت لآخر. سيتم إشعار المستخدمين بالتعديلات عبر البريد الإلكتروني أو من خلال إشعار على الموقع. يعتبر استمرارك في استخدام الخدمة موافقة ضمنية على الشروط الجديدة.</li>
-                    </ul>
-                </div>
-              </div>
-            </div>
-            <!-- Service Execution -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                  تنفيذ الخدمة
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#serviceDetails">
-                <div class="accordion-body">
-                    <ul class="content-list-dots">
-                        <li>سيتمكن المستخدم من الوصول إلى جميع المقالات، الفيديوهات، والدروس الحصرية غير المتاحة للمستخدمين العاديين.</li>
-                        <li>سيتمتع المستخدم بتجربة تصفح خالية من الإعلانات، مما يتيح له التركيز على المحتوى دون أي إزعاج.</li>
-                        <li>يحصل المستخدم على خصومات حصرية على الخدمات أو المنتجات المتوفرة، بالإضافة إلى عروض خاصة وخصومات موسمية.</li>
-                        <li>يتمتع المستخدم بإمكانية الوصول إلى فريق دعم فني مخصص لمساعدته في حل أي مشاكل قد تواجهه بسرعة وكفاءة.</li>
-                        <li>يمكن للمستخدم تحميل المحتوى المفضل لديه للوصول إليه بدون الحاجة للاتصال بالإنترنت، مما يتيح له الاستفادة منه في أي وقت.</li>
-                        <li>يحصل المستخدم على إشعارات مبكرة وتنبيهات حول التحديثات أو الأحداث القادمة، ليكون من أوائل المستفيدين من أي جديد.</li>
-                    </ul>
-                </div>
-              </div>
-            </div>
-            <!-- Service Sectors -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                  قطاعات الخدمة
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#serviceDetails">
-                <div class="accordion-body">
-                    <div class="service-card">
-                        <div class="card-body">
-                          <!-- Icon Section -->
-                          <div class="icon-container">
-                            <img src="../../assets/images/serv-icon.svg" alt="Icon" class="icon-img" />
-                          </div>
-                          <!-- Title -->
-                          <h5 class="card-title fw-bold">استشارات تخصصية</h5>
-                          <!-- Description -->
-                          <p class="card-text text-muted">
-                            حلول متخصصة تلبي احتياجاتك الفريدة لتحقيق أفضل النتائج في مجالك.
-                          </p>
-                          <!-- Button -->
-                          <a href="#" class="btn btn-dark">تفاصيل الخدمة</a>
-                        </div>
-                      </div>
-                </div>
-              </div>
-            </div>
-            <!-- Specialized Consultations -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFour">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-                  استشارات تخصصية
-                </button>
-              </h2>
-              <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#serviceDetails">
-                <div class="accordion-body">
-                  تفاصيل استشارات تخصصية... يمكنك وضع المحتوى الخاص بك هنا.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    .accordion-body {
+        padding: 1rem 0rem;
+    }
+
+    .service-price-box {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background-color: #EFFCFF;
+        border: solid 1px #2295B1;
+        border-radius: 12px;
+        padding: 24px;
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            color: #ADADAD;
+        }
+        h5 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #737B8B;
+        }
+    }
+
+    .content-list {
+        padding: 0;
+        margin-top: 2rem;
+        li {
+            color: #384250;
+            font-size: 18px;
+            font-weight: 300;
+            list-style: none;
+            margin-bottom: 16px;
+            background: url(../images/ok-circle.svg) no-repeat left;
+            padding-left: 36px;
+            background-size: 24px;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+          }
+    }
+    .content-list-dots {
+        padding: 0;
+        li {
+            color: #384250;
+            font-size: 18px;
+            font-weight: 300;
+            list-style: none;
+            margin-bottom: 16px;
+            background: url(../images/dots-list.svg) no-repeat left;
+            padding-left: 36px;
+            background-size: 24px;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+          }
+    }
+}
+.ser-cards {
+    .row {
+        padding-left: 8px;
+        padding-right: 8px;
+        .col-md-6 {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+    }
+    .service-card {
+        border-radius: 16px;
+        box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.10), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+        border: 1px solid #CEDEE2;
+        padding: 16px;
+        .card-body {
+            padding: 0;
+        }
+      
+        .icon-container {
+          display: flex;
+          justify-content: start;
+          align-items: start;
+          margin-bottom: 1.5rem;
+      
+          .icon-img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+          }
+        }
+      
+        .card-title {
+          color: #1F2A37;
+          font-size: 1.125rem;
+          font-weight: 600;
+          margin-bottom: 1.5rem;
+        }
+      
+        .card-text {
+          font-size: 1rem;
+          font-weight: 400;
+          color: #6c757d;
+          margin-bottom: 1.5rem;
+        }
+      
+        .btn-neutral {
+          font-size: 0.9rem;
+          border-radius: 5px;
+          background-color: #4D5761;
+          color: #fff;
+          transition: background-color 0.3s ease-in-out;
+          &:hover {
+            background-color: #384250;
+          }
+        }
+      
+        &:hover {
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        &.disabled {
+            opacity: 0.5;
+            a {
+                cursor: not-allowed;
+            }
+          }
+      }
+      .active {
+        border: 2px solid #1F2A37;
+      }
+}
+
+.consultations-cards {
+    .row {
+        padding-left: 8px;
+        padding-right: 8px;
+        .col-lg-2-4 {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+    }
+    .con-card {
+        border-radius: 16px;
+        border: 1px solid #CEDEE2;
+        padding: 2rem 1rem;
+        margin-top: 16px;
+        .card-body {
+            padding: 0;
+        }
+      
+        .icon-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 1.5rem;
+          .icon-img {
+            width: 50px;
+            height: 50px;
+            background: #F3FCF6;
+            border-radius: 8px;
+            padding: 9px;
+            object-fit: contain;
+          }
+        }
+      
+        .title {
+          color: #303030;
+          font-size: 1.125rem;
+          font-weight: 600;
+          margin-bottom: .75rem;
+          text-align: center;
+        }
+      
+        .text {
+          font-size: 1rem;
+          font-weight: 300;
+          color: #333333;
+          margin-bottom: 1.5rem;
+          text-align: center;
+        }
+      
+        .btn-primary {
+          font-size: 0.9rem;
+          padding: 1px 4px;
+          border-radius: 4px;
+          background-color: #1B8354;
+          border: solid 0px;
+          color: #fff;
+          transition: background-color 0.3s ease-in-out;
+          margin: 0 auto;
+          display: block;
+          img {
+            height: 16px;
+            width: 16px;
+          }
+          &:hover {
+            background-color: #166A45;
+          }
+        }
+      
+        &:hover {
+            box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.10), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+        }
+        &.disabled {
+            opacity: 0.5;
+            a {
+                cursor: not-allowed;
+            }
+          }
+      }
+      .active {
+        border: 2px solid #1F2A37;
+      }
+}
+
+@media (min-width: 800px) {
+    .col-lg-2-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 991px) {
+    .service-card {
+        margin-top: 16px !important;
+    }
+}
+
+@media (min-width: 1199px) {
+    .col-lg-2-4 {
+        flex: 0 0 33%;
+        max-width: 33%;
+    }
+}
+
+@media (min-width: 1523px) {
+    .col-lg-2-4 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
   
 
+.card {
+    box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.10), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+    overflow: hidden;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    .card-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        h5 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 20px;
+            color: #000;
+        }
+        .title-btn {
+            display: flex;
+            gap: 16px;
+            .view-all {
+                font-size: 14px;
+                color: #6A7383;
+            }
+            button {
+                background-color: #ffff;
+                border: solid 1px #D2D6DB;
+                border-radius: 4px;
+                padding: 6px;
+                .btn-calendar.selected {
+                }
+                &.selected, &:hover {
+                    border: solid 1px #D2D6DB;
+                    background-color: #E5E7EB;
+                }
+            }
+            
+        }
+    }
+    .cardfooter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .btn {
+            font-size: 0.875rem;
+        }
+        .pagination {
+            margin: 0;
+        }
+        .form-group {
+            font-size: 12px;
+            color: #404042;
+            label {
+                margin: 0;
+                margin-right: 5px;
+            }
+            select {
+                font-size: 0.875rem;
+                border-radius: 8px;
+            }
+        }
+    }
+}
 
-    <script src="../../assets/js/jquery-3.5.1.min.js"></script>
-    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    thead {
+        tr {
+            th {
+                background-color: #F3F4F6;
+                padding: 15px 16px;
+                border-top: solid 1px #E5E7EB;
 
-</body>
+                &:first-child {
+                    border-top-left-radius: 8px;
+                    border-top-right-radius: 0px;
+                    border-left: solid 1px #E5E7EB;
+                    border-right: solid 0px;
+                }
+                &:last-child {
+                    border-top-right-radius: 8px;
+                    border-top-left-radius: 0px;
+                    border-right: solid 1px #E5E7EB;
+                    border-left: solid 0px;
+                    text-align: end;
+                }
+                    font-size: .75rem;
+                    color: #384250;
+            }
+        }
+    }
+    tbody {
+        tr {
+            transition: background-color 0.2s;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            background-color: #fff;
+            border: 1px solid #e3e6ea;
+            overflow: hidden;
+            width: 100%;
+            &:hover {
+                background-color: lighten(#f8f9fa, 5%);
+            }
+            td {
+                padding: 16px;
+                text-align: start;
+                align-content: center;
+                border-bottom: solid 1px #E5E7EB;
+                &:first-child {
+                    border-left: solid 1px #E5E7EB;
+                    border-right: solid 0px;
+                }
+                &:last-child {
+                    border-right: solid 1px #E5E7EB;
+                    border-left: solid 0px;
+                }
+                input[type="checkbox"] {
+                    width: 22px;
+                    height: 22px;
+                    border: 1px solid #ccc;
+                    appearance: none;
+                    cursor: pointer;
+                    border-radius: 4px;
+                    transition: all 0.3s ease;
+                    display: flex;
+                }
+                input[type="checkbox"]:checked {
+                    background-color: #19697C;
+                    border-color: #19697C;
+                    background-image: url('../images/ok.svg');
+                    background-size: 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+                .twoline {
+                    width: max-content;
+                    p {
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: #2D2B2B;
+                        margin: 0;
+                        width: max-content;
+                    }
+                    span {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #7D8493;
+                    }
+                }
+                .time {
+                    display: flex;
+                    gap: 8px;
+                    span.dates-tag {
+                        background-color: #F9FAFB;
+                        border: solid 1px #E5E7EB;
+                        padding: 3px 8px;
+                        border-radius: 4px;
+                        color: #1F2A37;
+                        font-size: 12px;
+                        font-weight: 500;
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        flex-direction: row-reverse;
+                        width: max-content;
+                        i.clock {
+                            background-image: url(../images/clock.svg);
+                            height: 14px;
+                            width: 14px;
+                            display: block;
+                        }
+                    }
+                }
+               .info {
+                span.info-tag {
+                    background-color: #F9FAFB;
+                    border: solid 1px #E5E7EB;
+                    padding: 3px 8px;
+                    border-radius: 4px;
+                    color: #1F2A37;
+                    font-size: 12px;
+                    font-weight: 500;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    flex-direction: row-reverse;
+                    width: max-content;
+                }
+               }
+                .text {
+                    width: max-content;
+                    p {
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: #161616;
+                    }
+                }
+                .stauts {
+                    p {
+                        padding: 4px 12px;
+                        border-radius: 50px;
+                        width: fit-content;
+                        margin: 0;
+                        width: max-content;
+                        font-size: 14px;
+                    }
+                    p.stauts-1 {
+                        background-color: #FFF7DE;
+                        color: #EE8D20;
+                    }
+                }
+                .communication {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    width: max-content;
+                    span.webex-tag {
+                        background-color: #e7f1ff;
+                        border: solid 1px #B2DDFF;
+                        padding: 3px 8px;
+                        border-radius: 4px;
+                        color: #1849A9;
+                        font-size: 12px;
+                        font-weight: 500;
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        flex-direction: row-reverse;
+                        i.video-call {
+                            background-image: url(../images/vcall.svg);
+                            height: 14px;
+                            width: 14px;
+                            display: block;
+                        }
+                    }
+                    i.location {
+                        display: block;
+                        height: 16px;
+                        width: 16px;
+                        background-image: url(../images/location.svg);
+                    }
+                    p {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #6A7383;
+                        margin: 0;
+                    }
+                }
+                .action-table {
+                    display: flex;
+                    gap: 10px;
+                    justify-content: end;
+                    .btn {
+                        font-size: 0.875rem;
+                        font-weight: 400;
+                        padding: .375rem 0.75rem;
+                        border-radius: 4px;
+                        width: max-content;
+                        box-shadow: none;
+                        border: solid 0px;
+                        &.primary {
+                            background-color: #1B8354;
+                            color: #fff;
+                            &:hover {
+                                background-color: #166A45;
+                            }
+                        }
+                        &.neutral {
+                            background-color: #0D121C;
+                            color: #fff;
+                            &:hover {
+                                background-color: #1F2A37;
+                            }
+                        }
+                        &.btn-sco {
+                            background-color: #CFD2D3;
+                            color: #2D2B2B;
+                            &:hover {
+                                background-color: darken(#f3f3f3, 10%);
+                            }
+                        }
+                        &.more {
+                            background-color: transparent;
+                            border: solid 1px #D2D6DB;
+                            padding: .375rem;
+                            img {
+                                height: 20px;
+                                width: 20px;
+                            }
+                            svg {
+                                fill: #1D1B20;
+                            }
+                            &:hover {
+                                background-color: #f3f3f3;
+                                border-radius: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+            &:last-child {
+                td {
+                    &:first-child {
+                        border-bottom-left-radius: 8px;
+                        border-bottom-right-radius: 0px;
+                    }
+                    &:last-child {
+                        border-bottom-right-radius: 8px;
+                        border-bottom-left-radius: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
 
-</html>
+.table-2 {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    tbody {
+        tr {
+            transition: background-color 0.2s;
+            margin-bottom: 10px;
+            display: table;
+            background-color: #fff;
+            border: 1px solid #e3e6ea;
+            overflow: hidden;
+            border-left: none;
+            border-right: none;
+            width: 100%;
+            &:hover {
+                background-color: lighten(#f8f9fa, 5%);
+            }
+            td {
+                padding: 16px;
+                text-align: start;
+                input[type="checkbox"] {
+                    width: 22px;
+                    height: 22px;
+                    border: 1px solid #ccc;
+                    appearance: none;
+                    cursor: pointer;
+                    border-radius: 4px;
+                    transition: all 0.3s ease;
+                    display: flex;
+                }
+                input[type="checkbox"]:checked {
+                    background-color: #19697C;
+                    border-color: #19697C;
+                    background-image: url('../images/ok.svg');
+                    background-size: 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+                .facility {
+                    background-color: #E6E6E6;
+                    border-radius: 50px;
+                    height: 46px;
+                    width: 46px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    i.icon-fac {
+                        background-image: url(../images/facility.svg);
+                        height: 20px;
+                        width: 20px;
+                        display: block;
+                    }
+                }
+                .twoline {
+                    width: max-content;
+                    p {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #2D2B2B;
+                        margin: 0;
+                        width: max-content;
+                    }
+                    span {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #7D8493;
+                    }
+                }
+                .time p {
+                    padding: 4px 12px;
+                    background-color: #f3f3f3;
+                    border-radius: 8px;
+                    width: fit-content;
+                    color: #6A7383;
+                    margin: 0;
+                    width: max-content;
+                }
+                .text {
+                    width: max-content;
+                    p {
+                        font-size: 16px;
+                        color: #6A7383;
+                    }
+                }
+                .stauts {
+                    p {
+                        padding: 4px 12px;
+                        border-radius: 50px;
+                        width: fit-content;
+                        margin: 0;
+                        width: max-content;
+                        font-size: 14px;
+                    }
+                    p.stauts-1 {
+                        background-color: #FFF7DE;
+                        color: #EE8D20;
+                    }
+                    p.stauts-2 {
+                        background-color: #DFF0FC;
+                        color: #428EE3;
+                    }
+                    p.stauts-3 {
+                        background-color: #E5F3E6;
+                        color: #3B9641;
+                    }
+                    p.stauts-4 {
+                        background-color: #FDE2E1;
+                        color: #963E3B;
+                    }
+                }
+                .communication {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    width: max-content;
+                    i.location {
+                        display: block;
+                        height: 16px;
+                        width: 16px;
+                        background-image: url(../images/location.svg);
+                    }
+                    p {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #6A7383;
+                        margin: 0;
+                    }
+                }
+                .action-table {
+                    display: flex;
+                    gap: 10px;
+                    justify-content: end;
+                    .btn {
+                        font-size: 0.875rem;
+                        padding: 0.25rem 0.75rem;
+                        border-radius: 5px;
+                        width: max-content;
+                        &.btn-info {
+                            background-color: #0095a0;
+                            color: #fff;
+                            &:hover {
+                                background-color: darken(#0095a0, 10%);
+                            }
+                        }
+                        &.btn-info-dark {
+                            background-color: darken(#0095a0, 10%);
+                            color: #fff;
+                            &:hover {
+                                background-color: darken(#0095a0, 10%);
+                            }
+                        }
+                        &.btn-sco {
+                            background-color: #CFD2D3;
+                            color: #2D2B2B;
+                            &:hover {
+                                background-color: darken(#f3f3f3, 10%);
+                            }
+                        }
+                        &.bt-more {
+                            background-color: transparent;
+                            border: none;
+                            padding: 0;
+                            svg {
+                                fill: #7B8491;
+                            }
+                            &:hover {
+                                background-color: #f3f3f3;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+nav {
+    p {
+        font-size: 12px;
+        color: #404042;
+    }
+    .pagination {
+        .page-item {
+            .page-link {
+                border: 0px solid ;
+                background: transparent;
+                font-size: 14px;
+                font-weight: 300;
+                color: #161616;
+                &:hover {
+                    border-color: #569A38;
+                    box-shadow: none !important;
+                    border-bottom: solid 4px #569A38;
+                    padding-bottom: 2px;
+                }
+                &:focus {
+                    border: none;
+                    box-shadow: none;
+                }
+            }
+
+            .Next {
+                padding: 4px;
+                i.next-io {
+                    display: block;
+                    background-image: url(../images/next.svg);
+                    height: 20px;
+                    width: 20px;
+                }
+                &:hover {
+                    border: none;
+                }
+            }
+
+            .Previous {
+                padding: 4px;
+                i.previous-io {
+                    display: block;
+                    background-image: url(../images/Previous.svg);
+                    height: 20px;
+                    width: 20px;
+                }
+                &:hover {
+                    border: none;
+                }
+            }
+
+            &.active .page-link {
+                border-bottom: solid 4px #569A38;
+                padding-bottom: 2px;
+            }
+        }
+        .more {
+            .page-link {
+                border: solid 1px #161616 !important;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .cardfooter {
+        justify-content: center !important;
+        .form-group {
+            display: none !important;
+        }
+    }
+    .pag-table {
+        p {
+            display: none;
+        }
+        ul {
+            padding: 0 !important;
+        }
+    }
+}
+
